@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="css/myStyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-social.css">
+  <title>A Simple JavaScript Calculator</title>
+</head>
+
+<body>
+  <h1 style="font-family: monospace; text-align:center">By- <i>Ishan</i></h1>
+  <h3 style="sans-serif; text-align: center">Get In Touch with me <a href="http://www.facebook.com/ishanxavi"><button class="btn btn-social btn-facebook" title="Ishan">Facebook<i class="fa fa-facebook"></i></button></a></h3>
+  <form id="calculator" class="calcBox">
+    <input id="screen" class="screen" name="screen" type="text" readonly></input>
+    <input type="button" onclick="calculator.screen.value += '0'" class="Btn btn" value="0"></input>
+    <input onclick="calculator.screen.value = ''" type="button" class="equal btn btn-danger" style="width: 200px; height: 50px; font-size:28px; margin-bottom: 6px;" value="AC"></input><br>
+    <input type="button" onclick="calculator.screen.value += '1'" class="Btn btn" value="1"></input>
+    <input type="button" onclick="calculator.screen.value += '2'" class="Btn btn" value="2"></input>
+    <input type="button" onclick="calculator.screen.value += '3'" class="Btn btn" value="3"></input>
+    <input type="button" onclick="calculator.screen.value += '*'" class="Btn btn" value="*"></input><br>
+    <input type="button" onclick="calculator.screen.value += '4'" class="Btn btn" value="4"></input>
+    <input type="button" onclick="calculator.screen.value += '5'" class="Btn btn" value="5"></input>
+    <input type="button" onclick="calculator.screen.value += '6'" class="Btn btn" value="6"></input>
+    <input type="button" onclick="calculator.screen.value += '+'" class="Btn btn" value="+"></input><br>
+    <input type="button" onclick="calculator.screen.value += '7'" class="Btn btn" value="7"></input>
+    <input type="button" onclick="calculator.screen.value += '8'" class="Btn btn" value="8"></input>
+    <input type="button" onclick="calculator.screen.value += '9'" class="Btn btn" value="9"></input>
+    <input type="button" onclick="calculator.screen.value += '/'" class="Btn btn" value="/"></input><br>
+    <input type="button" onclick="calculator.screen.value = eval(calculator.screen.value)" class="equal btn btn-success" style="width: 200px; height: 55px; font-size:28px" value="="></input>
+    <input type="button" onclick="calculator.screen.value += '-'" class="Btn btn" value="-"></input>
+  </form>
+</body>
