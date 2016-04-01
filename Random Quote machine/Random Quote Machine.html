@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <link href="css/myStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body  style= "background-color: rgb(22, 160, 133);">
+  <div class="quoteWindow">
+  <div class="quote-text">
+    <i class="fa fa-quote-left fa-3x" style="color: rgb(22, 160, 133)"></i>
+    <p id="quoteText" style="color: rgb(22, 160, 133); font-size: 28px"></p>
+  </div>
+  <div class="quote-author">
+    <h4 id="quoteAuthor" style="color: rgb(22, 160, 133)"></h4>
+  </div>
+  <div class="buttons" id="tweetQuote">
+    <a class="button btn btn-social fa fa-twitter fa-3x" id="tweet-quote" title="Tweet!" target="_blank" style="color: rgb(22, 160, 133)">
+    </a>
+    <hr>
+    <button class="button btn btn-danger" id="btn">Change</button>
+  </div>
+</div>
+  <!--Javascript-->
+  <script>
+  //global variables
+    var paragraph = document.getElementById('quoteText');
+    var authorDisplay = document.getElementById('quoteAuthor');
+    var btn = document.getElementById('btn');
+    var quotes = ["Only two things are infinite, the universe and human stupidity, and I'm not sure about the former.", "The science of today is the technology of tomorrow.", "Most people say that it is the intellect which makes a great scientist. They are wrong: it is character.", "Science is organized knowledge. Wisdom is organized life.", "Science is the great antidote to the poison of enthusiasm and superstition.", "Science never solves a problem without creating ten more.", "The distance between insanity and genius is measured only by success."];
+    var author = ["-Albert Einstein", "-Edward Teller", "-Albert Einstein", "-Immanuel Kant", "-Adam Smith", "-George Bernard", "-Bruce Feirstein"];
+    var tweetIt = document.getElementById('tweet-quote');
+
+    //variables for tweet
+    var fullTweetPara;
+    btn.onclick = function update(){
+      var randIndex = Math.floor(Math.random()*7);
+      var authorIndex = randIndex;
+      var displayQuote = quotes[randIndex];
+      var displayAuthor = author[authorIndex];
+      fullTweetPara = "https://twitter.com/share?text=" + displayQuote + displayAuthor;
+      paragraph.textContent = displayQuote;
+      authorDisplay.textContent = displayAuthor;
+    }
+
+    tweetIt.onclick = function(){
+      window.open(fullTweetPara);
+    }
+  </script>
+</body>
